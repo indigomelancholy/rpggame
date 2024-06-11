@@ -1,0 +1,27 @@
+public class Main {
+    public static void main(String[] args) {
+        Warrior warrior = new Warrior("Duke Bartabel", 80, 80, 5, 75, 30);
+        Mage mage = new Mage("Wizard Ernesto", 100, 50, 2, 85, 25);
+        Rogue rogue = new Rogue("Bandit Fugazi", 60, 100, 1, 65, 30);
+
+        System.out.println("Round 1:");
+        warrior.swingAttack(mage);
+        mage.fireAttack(warrior);
+        warrior.levelUp();
+        warrior.statsDisp();
+
+        System.out.println("\nRound 2:");
+        warrior.swingAttack(mage);
+        mage.nauseaDefence(warrior);
+        mage.levelUp();
+        mage.statsDisp();
+
+        System.out.println("\nRound 3:");
+        rogue.sneakAttack(warrior);
+        warrior.shieldDefence();
+        mage.fireAttack(rogue);
+        rogue.deceptionDefence(mage);
+        rogue.levelUp();
+        rogue.statsDisp();
+    }
+}
